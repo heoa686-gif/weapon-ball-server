@@ -1,0 +1,13 @@
+# Triển khai trên Render: New > Blueprint > chọn repo chứa thư mục này
+services:
+  - type: web
+    name: weapon-ball-arena-server
+    runtime: node
+    plan: free
+    buildCommand: echo "không cần build"
+    startCommand: node server.js
+    envVars:
+      - key: ADMIN_KEY
+        generateValue: true
+      - key: NODE_VERSION
+        value: "18"
